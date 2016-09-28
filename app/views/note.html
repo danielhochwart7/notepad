@@ -1,0 +1,9 @@
+<ng-view>
+    <div>
+        <h3>{{selected.title}}</h3>
+        <p>
+            {{selected.content}}
+        </p>
+        <span class="glyphicon glyphicon-minus" ng-model="selected" ng-model="notes" ng-click="removeNote(selected)">Del</span>    
+    </div>
+</ng-view>
