@@ -1,6 +1,6 @@
 var app = require('./app_config.js');
 
-var noteController = require('./controllers/noteController.js');
+var noteController = require('./controllers/note-controller.js');
 
 app.get('/', function(req, res) {
     res.sendFile('index.html');
@@ -13,7 +13,7 @@ app.get('/notes', function(req, res) {
 });
 
 app.post('/notes', function(req, res) {
-    
+
     var title = req.param('title');
     var content = req.param('content');
 
