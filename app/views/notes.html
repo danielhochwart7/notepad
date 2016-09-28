@@ -1,0 +1,23 @@
+<div class="bordered" layout="column" style="height:500px" ng-cloak>
+    <md-content flex>
+        <md-toolbar md-scroll-shrink ng-if="true">
+            <div class="md-toolbar-tools bordered">
+                <h3>
+                    <span>{{title}}</span>
+                    <span class="glyphicon glyphicon-plus icon" ng-click="addNote()">New</span>
+                </h3>
+            </div>
+        </md-toolbar>
+        <md-list>
+            <md-list-item class="md-2-line" ng-repeat="item in notes" ng-model="selected" ng-click="editNote(item)">
+                <div class="md-list-item-text">
+                    <h3>{{item.title}}</h3>
+                    <p>
+                        {{item.content}}
+                    </p>
+                </div>
+                <md-divider inset></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</div>
